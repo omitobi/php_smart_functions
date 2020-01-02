@@ -60,4 +60,14 @@ class SmartTests extends TestCase
         $this->assertTrue($result_1);
         $this->assertFalse($result_2);
     }
+
+    public function testArrHead()
+    {
+        $array['a'] = 1;
+        $array['b'] = 2;
+
+        $result = Smart::arrHead($array);
+
+        $this->assertEquals(['a' => 1], $result);
+    }
 }
