@@ -44,4 +44,21 @@ class Smart
     {
         return $first . $second;
     }
+
+    /**
+     * Equality operator 'Smartified'
+     *
+     * @param $first
+     * @param $second
+     * @param bool $strict
+     * @return mixed
+     */
+    public static function equal($first, $second, bool $strict = false)
+    {
+        return self::ifElse(
+            $strict,
+            $first === $second,
+            $first == $second
+        );
+    }
 }
