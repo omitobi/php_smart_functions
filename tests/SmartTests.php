@@ -31,4 +31,14 @@ class SmartTests extends TestCase
             ['a' => 1, 'b' => 2], $result
         );
     }
+
+    public function testStrConcat()
+    {
+        $first_string = 'a';
+        $second_string = 'b';
+
+        $result = Smart::strConcat($first_string, $second_string);
+
+        $this->assertEquals('ab', $result);
+    }
 }
