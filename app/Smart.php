@@ -20,4 +20,9 @@ class Smart
             ? $result
             : $default;
     }
+
+    public static function arrConcat(array $first, array $second)
+    {
+        return $first + $second;
+    }
 }
