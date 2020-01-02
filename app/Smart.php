@@ -67,4 +67,23 @@ class Smart
             $first == $second
         );
     }
+
+    /**
+     * You've head of Head of Array in F# Yes, head returns array
+     *
+     * @param array $array
+     * @return array
+     */
+    public static function arrHead(array $array)
+    {
+        $result = [];
+
+        foreach ($array as $key => $item) {
+            $result[$key] = $item;
+
+            break;
+        }
+
+        return $result;
+    }
 }
