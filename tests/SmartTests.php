@@ -41,4 +41,16 @@ class SmartTests extends TestCase
 
         $this->assertEquals('ab', $result);
     }
+
+    public function testEqual()
+    {
+        $first_item = 1;
+        $second_item = '1';
+
+        $result_1 = Smart::equal($first_item, $second_item);
+        $result_2 = Smart::equal($first_item, $second_item, true);
+
+        $this->assertTrue($result_1);
+        $this->assertFalse($result_2);
+    }
 }
