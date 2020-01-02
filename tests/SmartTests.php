@@ -24,11 +24,13 @@ class SmartTests extends TestCase
     {
         $first_array['a'] = 1;
         $second_array['b'] = 2;
+        $third_array['c'] = 3;
+        $fourth_array['d'] = 4;
 
-        $result = Smart::arrConcat($first_array, $second_array);
+        $result = Smart::arrConcat($first_array, $second_array, $third_array, $fourth_array);
 
         $this->assertEquals(
-            ['a' => 1, 'b' => 2], $result
+            ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4], $result
         );
     }
 
