@@ -25,12 +25,18 @@ class Smart
      * Arrays can be concatenated also
      *
      * @param array $first
-     * @param array $second
+     * @param array ...$second
      * @return array
      */
-    public static function arrConcat(array $first, array $second)
+    public static function arrConcat(array $first, array ...$second)
     {
-        return $first + $second;
+        $result = $first;
+
+        foreach ($second as $item) {
+            $result += $item;
+        }
+
+        return $result;
     }
 
     /**
