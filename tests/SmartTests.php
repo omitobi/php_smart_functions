@@ -19,4 +19,16 @@ class SmartTests extends TestCase
 
         $this->assertEquals('yes', $result);
     }
+
+    public function testArrConcat()
+    {
+        $first_array['a'] = 1;
+        $second_array['b'] = 2;
+
+        $result = Smart::arrConcat($first_array, $second_array);
+
+        $this->assertEquals(
+            ['a' => 1, 'b' => 2], $result
+        );
+    }
 }
